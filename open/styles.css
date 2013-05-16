@@ -1,3 +1,27 @@
+#header-container {
+	height: 170px;
+	overflow: hidden;
+	padding: 0;
+	margin:  0;
+}
+
+#video-background {
+	width: 100%;
+	z-index: 100;
+	position: absolute;
+	height: 170px;
+	overflow: hidden;
+}
+
+#header {
+	z-index: 900;
+	position: absolute;
+	left:  0;
+	right: 0;
+	top:   0;
+}
+/* --- */
+
 #header {
 	width: 600px;
 }
