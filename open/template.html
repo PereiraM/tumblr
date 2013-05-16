@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>       	   
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="tumblr-theme" content="11721" />
+
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+<meta name="image:Header" content="" />
+<meta name="text:Disqus Shortname" content=""/> 	 	 	   
+<meta name="text:Twitter Title" content="Twitter"/>
+<meta name="text:Google Analytics ID" content=""/>
+<meta name="text:Footer Text" content="The End"/> 	 	 	   
+
+<title>{Title} {block:PermalinkPage}{block:Posts}{block:Title}- {Title}{/block:Title}{/block:Posts}{/block:PermalinkPage}</title>
+<link rel="icon" href="{Favicon}"/> 	 	 	   
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+<link href="http://static.tumblr.com/jnt4wuy/Umbl6d4v6/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">{CustomCSS}</style>
+<!--[if lte IE 8]>
+	<script src="http://cdn.obox-design.com/micro-inkdrop/domassistantcompressed-2.7.4.js" type="text/javascript"></script>
+	<script src="http://cdn.obox-design.com/micro-inkdrop/ie-css3.js" type="text/javascript"></script>
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="http://dl.dropboxusercontent.com/u/123029/qz/tumblr/open/style.css" media="screen" />
+<link rel="stylesheet" href="http://dl.dropboxusercontent.com/u/123029/qz/tumblr/open/video-slideshow/css/bigvideo.css">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script src="http://dl.dropboxusercontent.com/u/123029/qz/tumblr/open/video-slideshow/js/modernizr-2.5.3.min.js"></script>
+
+
+<meta name="robots" content="noindex"/> 	 	 	   
+</head>
+<body>
+<!-- Tumblr Theme #11721 -->
+<div id="header-container">
+
+
+
+    <div id="video-background">
+	    <div class="wrapper">
+	        <div class="screen" id="screen-1" data-video="http://dl.dropboxusercontent.com/u/123029/qz/tumblr/open/video-slideshow/vid/record-player.mp4">
+	            <img src="http://dl.dropboxusercontent.com/u/123029/qz/tumblr/open/video-slideshow/vid/record-player-frame.jpg" class="big-image" />
+	        </div>
+	    </div>
+	</div>
+
+
+
+	<ul class="page-menu clearfix">
+		{block:HasPages} 	 	 	   
+            {block:Pages} 	 	 	   
+                <li><a href="{URL}">{Label}</a></li>
+            {/block:Pages} 	 	 	   
+		{/block:HasPages}
+    	<li class="social-links"><a href="{RSS}">RSS</a></li>
+		<li class="social-links"><a href="/archive">{lang:Archive}</a></li>
+        
+        <li class="social-links"><a href="http://app.qz.com">Version</a></li>
+
+    	<li class="social-links"><a href="http://twitter.com/qzopen">@qzopen</a></li>
+	</ul>
+	<div id="header" class="clearfix">
+		{block:IfHeaderImage}<div class="header-image"><a href="/"><img src="{image:Header}" /></a></div>{/block:IfHeaderImage}
+		<h1 class="logo"><a href="/">{Title}</a></h1>
+		{block:Description}<p>{Description}</p>{/block:Description}
+	</div>
+</div>
+<div id="container" class="clearfix"> 	 	 	   
+	<ul id="post-column">
+		{block:Posts}
+			<li class="post-container clearfix" id="post-{PostID}"> 	 	 	   
+				<div class="post clearfix {block:Text}post-note{/block:Text}{block:Link}post-url{/block:Link}{block:Quote}post-quote{/block:Quote}{block:Photo}post-image{/block:Photo}{block:Photoset}post-image{/block:Photoset}{block:Audio}post-audio{/block:Audio}{block:Video}post-video{/block:Video}{block:Chat}post-chat{/block:Chat}">
+				
+					<a href="{Permalink}" class="post-type" id="post-type-{PostID}">
+						{block:Text}Note{/block:Text}
+						{block:Link}Link{/block:Link}
+						{block:Quote}Quote{/block:Quote}
+						{block:Photo}Photo{/block:Photo}
+						{block:Photoset}Photoset{/block:Photoset} 	 	 	   
+						{block:Audio}Audio{/block:Audio}
+						{block:Video}Video{/block:Video}
+						{block:Chat}Chat{/block:Chat}
+					</a>
+					
+					{block:Text}
+						<h4 class="date">{DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</h4>
+						{block:Title}<h3 class="title"><a href="{Permalink}">{Title}</a></h3> {/block:Title}
+						<div class="copy">{Body}</div>
+					{/block:Text}
+					
+					{block:Link}
+						<h4 class="date">{DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</h4>
+						<h3 class="title"><a class="post-link" href="{URL}" {Target}>{Name}</a></h3>
+						
+						{block:Description} 
+							{Description} 	 	 	   
+						{/block:Description}
+						
+					{/block:Link}
+					
+					{block:Video}
+					
+						<div class="video-item">
+							{Video-500}
+						</div>
+						<h4 class="date">{DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</h4>
+						{block:Title}<h3 class="title"><a href="{Permalink}">{Title}</a></h3> {/block:Title}
+						{block:Caption}{Caption}{block:Caption}
+						
+					{/block:Video}
+					
+					{block:Audio}
+						<h4 class="date">{DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</h4>
+						{block:Artist}
+							<h3 class="title"><a href="{Permalink}">{Artist}</a></h3>
+						{/block:Artist}
+						
+						<div class="audio-container">
+							<div class="audio-meta">
+								<div class="play-count">
+									<div class="player">
+										 {AudioPlayer}
+									</div>
+								</div>
+								<p class="plays">{PlayCount} <span>{lang:Plays}</span></p> 	 	 	   
+							</div>
+						</div>
+						
+						{block:Caption}
+							<div class="post-copy-container">
+								{block:TrackName}<p>{TrackName}</p>{/block:TrackName}
+								{block:ExternalAudio}<p><a href="{ExternalAudioURL}">Download</a></p>{/block:ExternalAudio}
+								{Caption}
+							</div>	
+						{/block:Caption}
+					{/block:Audio}
+					
+					{block:Photo}
+						<div class="image-item">
+                        	{LinkOpenTag}
+                                {block:IndexPage}
+                                    <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
+                                {/block:IndexPage}
+                                {block:PermalinkPage}
+                                    <a href="{LinkURL}"><img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}</a>
+                                {/block:PermalinkPage}
+                            {LinkCloseTag}
+						</div>
+						<h4 class="date">{DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</h4>
+						<div class="copy">
+							{block:PostTitle}<h3 class="title"><a href="{Permalink}">{PostTitle}</a></h3>{/block:PostTitle}
+							{block:Caption}{Caption}{/block:Caption}
+						</div>
+					{/block:Photo}
+					
+					{block:Photoset}
+						<div class="image-item">
+							{Photoset-500}
+						</div>
+						<h4 class="date">{DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</h4>
+						<div class="copy"> 	 	 	   
+							{block:Caption}{Caption}{/block:Caption}
+						</div>
+					{/block:Photoset}
+					
+					{block:Chat}
+						<h4 class="date">{DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</h4>
+						{block:Title}<h3 class="title"><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+						<ul class="chat-item clearfix">
+							{block:Lines}
+							   <li class="clearfix">
+									{block:Label}<strong>{Label}</strong>{/block:Label}
+									<span>{Line}</span>
+								</li>
+							{/block:Lines}
+						</ul>
+					{/block:Chat}
+					
+					{block:Quote}
+						<h4 class="date">{DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</h4>
+						<blockquote>&ldquo;{Quote}&rdquo;</blockquote> 	 	 	   
+						{block:Source}<p class="quote-source">~ {Source}</p>{/block:Source}
+					{/block:Quote}					
+				</div>
+
+
+				<div class="meta clearfix">
+					{block:HasTags}
+						<div class="tag-list">
+							{block:Tags}
+								<a href="{TagURL}">{Tag}</a> 	 	 	   
+							{/block:Tags}
+						</div>
+					{/block:HasTags}
+					<div class="alt-meta">
+                        {block:IfDisqusShortname}
+                            <a href="{Permalink}#disqus_thread" class="dsq-comment-count">{lang:Comments}</a>
+                        {/block:IfDisqusShortname}
+						<a href="{ShortURL}" class="note-count">{lang:NoteCountWithLabel}</a>
+					</div>
+				</div>                    
+				
+				{block:PostNotes}
+					{PostNotes}
+				{/block:PostNotes}
+				
+				
+			</li>
+			{block:IndexPage} 
+						{block:IfDisqusShortname}
+							<script type="text/javascript">
+								//<![CDATA[
+								(function() {
+									var links = document.getElementsByTagName('a');
+									var query = '?';
+									for(var i = 0; i < links.length; i++) {if(links[i].href.indexOf('#disqus_thread') >= 0) {query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';}}
+									document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+								})();
+								//]]>
+							</script>
+						{/block:IfDisqusShortname}
+					{/block:IndexPage} 
+			{block:PermalinkPage} 
+				{block:IfDisqusShortname}
+					<li class="post-container clearfix">
+						<script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>
+						<div id="disqus_thread" class="post"></div>
+						<script type="text/javascript">
+							/*** var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] ***/
+							(
+								function() {
+								   var dsq = document.createElement('script');
+								   dsq.type = 'text/javascript';
+								   dsq.async = true;
+								   dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+										(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+										
+									}
+							)();
+						</script>
+						<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+
+<!--
+						<script type="text/javascript">
+							//<![CDATA[
+							(function() {
+								var links = document.getElementsByTagName('a');
+								var query = '?';
+								for(var i = 0; i < links.length; i++) {
+								if(links[i].href.indexOf('#disqus_thread') >= 0) {
+									query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+								}
+								}
+								document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+							})();
+							//]]>
+						</script>           
+-->
+
+					</li>	
+				{/block:IfDisqusShortname}
+			{/block:PermalinkPage}  	 	 	   
+		{/block:Posts}
+	</ul>
+</div>
+
+<div id="footer-container">
+	<div id="footer">
+		 {block:IndexPage}
+			{block:Pagination}
+				<div class="next-prev clearfix">
+					<div>
+						{block:PreviousPage}
+							<a href="{PreviousPage}" class="prev-page">Prev</a>
+						{/block:PreviousPage}
+						{block:NextPage}
+							<a href="{NextPage}" class="next-page">Next</a> 	 	 	   
+						{/block:NextPage}
+					</div>
+				</div>
+			{/block:Pagination}
+		{/block:IndexPage}
+		
+		{block:IfFooterText}
+			<h5>{text:Footer Text}</h5> 	 	 	   
+		{/block:IfFooterText}
+	</div>
+</div>
+
+{block:IfGoogleAnalyticsID}
+	<script type="text/javascript">
+    // <![CDATA[
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+        _gaq.push(['_trackPageview']);
+    
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+        })();
+    // ]]>
+    </script>
+{/block:IfGoogleAnalyticsID}
+
+
+
+<!-- BigVideo Dependencies -->
+
+<script>window.jQuery || document.write('<script src="http://dl.dropboxusercontent.com/u/123029/qz/tumblr/open/video-slideshow/js/jquery-1.8.1.min.js"><\/script>')</script>
+<script src="http://dl.dropboxusercontent.com/u/123029/qz/tumblr/open/video-slideshow/js/jquery-ui-1.8.22.custom.min.js"></script>
+<script src="http://dl.dropboxusercontent.com/u/123029/qz/tumblr/open/video-slideshow/js/jquery.imagesloaded.min.js"></script>
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+<!-- BigVideo -->
+<script src="http://dl.dropboxusercontent.com/u/123029/qz/tumblr/open/video-slideshow/js/bigvideo.js"></script>
+
+<!-- Tutorial Demo -->
+<script src="http://dl.dropboxusercontent.com/u/123029/qz/tumblr/open/video-slideshow/js/jquery.transit.min.js"></script>
+<script>
+    $(function() {
+        var screenIndex = 1,
+            numScreens = $('.screen').length,
+            isTransitioning = false,
+            transitionDur = 1000,
+            BV,
+            videoPlayer,
+            isTouch = Modernizr.touch,
+            $bigImage = $('.big-image'),
+            $window = $(window);
+
+        if (!isTouch) {
+            // initialize BigVideo
+            BV = new $.BigVideo({forceAutoplay:isTouch});
+            BV.init();
+            showVideo();
+            
+            BV.getPlayer().addEvent('loadeddata', function() {
+                onVideoLoaded();
+            });
+        }
+
+        function showVideo() {
+            BV.show($('#screen-'+screenIndex).attr('data-video'),{ambient:true});
+        }
+
+        function onVideoLoaded() {
+            $('#screen-'+screenIndex).find('.big-image').transit({'opacity':0},500)
+        }
+
+    });
+</script>
+
+
+
+
+
+
+</body> 	 	 	   
+<!--
+    This Tumblr Theme and all of its CSS, Javascript,
+    and media assets are subject to Tumblr's Terms of Service:
+
+    http://www.tumblr.com/terms_of_service
+-->
+</html>
